@@ -4,10 +4,10 @@ import 'package:http_riverpod_app/controller/post_controller.dart';
 import 'package:http_riverpod_app/model/post/post.dart';
 import 'package:http_riverpod_app/view/pages/post/home/post_home_page_view_model.dart';
 
-import '../../../../dto/post/post_response_dto.dart';
 
 class PostHomePage extends ConsumerWidget {
-  const PostHomePage({Key? key}) : super(key: key);
+  final posts;
+  const PostHomePage(this.posts, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

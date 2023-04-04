@@ -1,8 +1,16 @@
 
-
-import 'package:http_riverpod_app/dto/post/post_response_dto.dart';
 import 'package:http_riverpod_app/model/post/post.dart';
 
+List<Post> posts = [
+  Post(id: 1, title: "제목1",body: "ㅎㅇ",),
+  Post(id: 2, title: "제목2"),
+  Post(id: 3, title: "제목3"),
+  Post(id: 4, title: "제목4"),
+  Post(id: 5, title: "제목5"),
+  Post(id: 6, title: "제목6"),
+  Post(id: 7, title: "제목7"),
+  Post(id: 8, title: "제목8"),
+];
 
 //얘의 책임은 통신과 파싱, 여기서 화면 제어하게 하지 않는다.
 class PostRepository {
@@ -17,16 +25,7 @@ class PostRepository {
 
   Future<List<Post>> findAll() {
     return Future.delayed(Duration(seconds: 1), (){
-      return [
-        Post(id: 1, title: "제목1",body: "ㅎㅇ",),
-        Post(id: 2, title: "제목2"),
-        Post(id: 3, title: "제목3"),
-        Post(id: 4, title: "제목4"),
-        Post(id: 5, title: "제목5"),
-        Post(id: 6, title: "제목6"),
-        Post(id: 7, title: "제목7"),
-        Post(id: 8, title: "제목8"),
-      ];
+      return posts;
     });
   }
 

@@ -1,22 +1,3 @@
-
-// //통신을 통해 레파지토리에서 파싱된 데이터
-// class PostDto {
-//   int id;
-//   int userId;
-//   String title;
-//   String body;
-//
-//   //Future를 쓰면 무조건 들어오는데 -> required
-//   // 우리는 watch를 쓸거니까 초기값이 없을 수도 있다.
-//
-//   PostDto({required this.id, required this.userId, required this.title});
-//
-//   factory PostDto.fromJson(Map<String, dynamic> json) =>
-//       PostDto(id: json["id"], title: json["title"]);
-//
-//   Map<String, dynamic> toJson() => {"id": id, "title": title};
-// }
-
 import 'package:http_riverpod_app/model/user/user.dart';
 
 class Post{
@@ -25,6 +6,9 @@ class Post{
   String? title;
   String? body;
   User? user;
+
+//   //Future를 쓰면 무조건 들어오는데 -> required
+//   // 우리는 watch를 쓸거니까 초기값이 없을 수도 있다.
 
   Post({this.userId, this.id, this.title, this.body, this.user});
 
